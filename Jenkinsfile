@@ -9,6 +9,7 @@ pipeline {
         }
       }
       steps {
+        sh 'rm -rf /var/jenkins_home/workspace/Spring-Petclinic/?/.m2/repository'
       	sh 'mvn -X clean install'
       }
     }
