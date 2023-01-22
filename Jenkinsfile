@@ -9,8 +9,7 @@ pipeline {
         }
       }
       steps {
-        sh 'rm ~/.m2/'
-      	sh 'mvn clean install'
+      	sh 'mvn -v'
       }
     }
   }
