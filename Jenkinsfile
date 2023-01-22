@@ -5,12 +5,11 @@ pipeline {
   	stage('Maven Install') {
     	agent {
       	docker {
-        	image 'maven:3.5.0'
+        	image 'maven:3.8.7'
         }
       }
       steps {
-        sh 'rm -rf /var/jenkins_home/workspace/Spring-Petclinic/?/.m2/repository'
-      	sh 'mvn -X clean install'
+      	sh 'mvn clean install'
       }
     }
   }
