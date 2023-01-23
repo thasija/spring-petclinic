@@ -9,7 +9,7 @@ pipeline {
         }
       }
       steps {
-      	sh 'mvn -Denforcer.fail=false clean install'
+      	sh 'mvn --settings ./.mvn/local-settings.xml clean install'
       }
     }
   }
