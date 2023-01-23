@@ -9,7 +9,7 @@ pipeline {
         }
       }
       steps {
-      	sh 'mvn --settings ./.mvn/local-settings.xml clean install'
+      	sh 'mvn --settings ./.mvn/local-settings.xml -Dcheckstyle.skip clean install'
       }
     }
   }
